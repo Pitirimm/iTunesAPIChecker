@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MusicViewController.swift
 //  iTunesAPIChecker
 //
 //  Created by Yuriy Martinovskiy on 25.06.2021.
@@ -7,14 +7,14 @@
 
 import UIKit
 
-class MovieViewController: UITableViewController {
+class MusicViewController: UITableViewController {
     let networkService = NetworkService()
     var media: ItunesAnswer? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let urlString = "https://itunes.apple.com/search?term=Animation+Kids&limit=10"
+        let urlString = "https://itunes.apple.com/search?term=music&media=music&limit=10"
         networkService.request(urlString: urlString) { [weak self] (result)  in
             switch result {
             
@@ -34,11 +34,11 @@ class MovieViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "MovieCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MusicCell", for: indexPath)
         var content = cell.defaultContentConfiguration()
         
         content.text = media?.results[indexPath.row].trackName
-        content.secondaryText = media?.results[indexPath.row].shortDescription
+        content.secondaryText = media?.results[indexPath.row].artistName
         
     
         guard let urlString = self.media?.results[indexPath.row].artworkUrl100 else { return cell }
@@ -51,4 +51,3 @@ class MovieViewController: UITableViewController {
         return cell
     }
 }
-

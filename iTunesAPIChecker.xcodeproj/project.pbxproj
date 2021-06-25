@@ -15,6 +15,7 @@
 		999C8E9B2685F07200418C31 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 999C8E992685F07200418C31 /* LaunchScreen.storyboard */; };
 		999C8EA32685F4AE00418C31 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 999C8EA22685F4AE00418C31 /* NetworkService.swift */; };
 		999C8EA52685F4D500418C31 /* MediaContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 999C8EA42685F4D500418C31 /* MediaContent.swift */; };
+		999C8EA726860C7000418C31 /* MusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 999C8EA626860C7000418C31 /* MusicViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		999C8E9C2685F07200418C31 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		999C8EA22685F4AE00418C31 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		999C8EA42685F4D500418C31 /* MediaContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaContent.swift; sourceTree = "<group>"; };
+		999C8EA626860C7000418C31 /* MusicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				999C8E8E2685F07000418C31 /* AppDelegate.swift */,
 				999C8E902685F07000418C31 /* SceneDelegate.swift */,
 				999C8E922685F07000418C31 /* MovieViewController.swift */,
+				999C8EA626860C7000418C31 /* MusicViewController.swift */,
 				999C8EA22685F4AE00418C31 /* NetworkService.swift */,
 				999C8EA42685F4D500418C31 /* MediaContent.swift */,
 				999C8E942685F07000418C31 /* Main.storyboard */,
@@ -143,6 +146,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				999C8EA726860C7000418C31 /* MusicViewController.swift in Sources */,
 				999C8EA52685F4D500418C31 /* MediaContent.swift in Sources */,
 				999C8E932685F07000418C31 /* MovieViewController.swift in Sources */,
 				999C8E8F2685F07000418C31 /* AppDelegate.swift in Sources */,
