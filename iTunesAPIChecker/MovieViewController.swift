@@ -19,10 +19,9 @@ class MovieViewController: UITableViewController {
             switch result {
             
             case .success(let movie):
-                movie.results.map { _ in
                     self?.media = movie
                     self?.tableView.reloadData()
-                }
+         
                 
             case .failure(let error):
                 print(error)
@@ -41,17 +40,13 @@ class MovieViewController: UITableViewController {
         content.text = media?.results[indexPath.row].trackName
         content.secondaryText = media?.results[indexPath.row].shortDescription
         
-        DispatchQueue.global().async {
-            guard let urlString = self.media?.results[indexPath.row].artworkUrl100 else { return }
-            guard let url = URL(string: urlString) else { return }
-            guard let imageData = try? Data(contentsOf: url) else { return }
+    
+        guard let urlString = self.media?.results[indexPath.row].artworkUrl100 else { return cell }
+        guard let url = URL(string: urlString) else { return cell }
+        guard let imageData = try? Data(contentsOf: url) else { return cell }
             
-            DispatchQueue.main.async {
-                content.image = UIImage(data: imageData)
+        content.image = UIImage(data: imageData)
                 
-            }
-        }
-        
         cell.contentConfiguration = content
         return cell
     }
