@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="JOZ-uB-MDd">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="at8-5R-YCa">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
@@ -63,13 +63,59 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yyC-Ns-MJC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="965" y="473"/>
+            <point key="canvasLocation" x="409" y="473"/>
         </scene>
-        <!--Main Tab Bar Controller-->
+        <!--Podcast-->
+        <scene sceneID="iP0-UD-eef">
+            <objects>
+                <tableViewController id="maH-v1-ih4" customClass="PodcastViewController" customModule="iTunesAPIChecker" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="C6h-Pk-YLO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PodcastCell" id="YET-AB-75y">
+                                <rect key="frame" x="0.0" y="24.5" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="YET-AB-75y" id="sEW-fO-ZT8">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="maH-v1-ih4" id="ZOP-MI-jQh"/>
+                            <outlet property="delegate" destination="maH-v1-ih4" id="Rvm-TP-Rx4"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Podcast" image="megaphone.fill" catalog="system" id="3jg-wa-oZg"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fOc-bq-HwS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1245" y="473"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="hsj-za-ybK">
+            <objects>
+                <navigationController id="at8-5R-YCa" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="w7I-nq-awb">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="JOZ-uB-MDd" kind="relationship" relationship="rootViewController" id="d5X-yK-8Gg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ivm-jG-bJ3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-648" y="-259"/>
+        </scene>
+        <!--iTunes API-->
         <scene sceneID="Ohy-eb-cqE">
             <objects>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="JOZ-uB-MDd" customClass="MainTabBarController" customModule="iTunesAPIChecker" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" title="iTunes API" id="wEd-dH-mlx"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="vJi-f6-Y9B">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -78,6 +124,7 @@
                     <connections>
                         <segue destination="sub-zb-WhW" kind="relationship" relationship="viewControllers" id="R3K-wi-2DI"/>
                         <segue destination="s4b-Nv-zSd" kind="relationship" relationship="viewControllers" id="51X-WQ-4DR"/>
+                        <segue destination="maH-v1-ih4" kind="relationship" relationship="viewControllers" id="xO4-FM-mkQ"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p41-uh-CqA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -87,6 +134,7 @@
     </scenes>
     <resources>
         <image name="film.fill" catalog="system" width="128" height="93"/>
+        <image name="megaphone.fill" catalog="system" width="128" height="114"/>
         <image name="music.note" catalog="system" width="97" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

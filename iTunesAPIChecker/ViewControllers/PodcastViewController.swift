@@ -1,13 +1,13 @@
 //
-//  MusicViewController.swift
+//  PodcastViewController.swift
 //  iTunesAPIChecker
 //
-//  Created by Yuriy Martinovskiy on 25.06.2021.
+//  Created by Yuriy Martinovskiy on 27.06.2021.
 //
 
 import UIKit
 
-class MusicViewController: UITableViewController {
+class PodcastViewController: UITableViewController {
     let networkService = NetworkService()
     var media: ItunesAnswer? = nil
     var urlString: String = ""
@@ -18,8 +18,8 @@ class MusicViewController: UITableViewController {
         networkService.request(urlString: urlString) { [weak self] (result)  in
             switch result {
             
-            case .success(let movie):
-                    self?.media = movie
+            case .success(let podcast):
+                    self?.media = podcast
                     self?.tableView.reloadData()
          
                 
@@ -34,7 +34,7 @@ class MusicViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "MusicCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "PodcastCell", for: indexPath)
         var content = cell.defaultContentConfiguration()
         
         content.text = media?.results[indexPath.row].trackName
@@ -50,3 +50,4 @@ class MusicViewController: UITableViewController {
         return cell
     }
 }
+

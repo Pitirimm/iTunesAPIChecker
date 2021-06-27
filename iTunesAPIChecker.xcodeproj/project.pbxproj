@@ -17,6 +17,7 @@
 		999C8EA52685F4D500418C31 /* MediaContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 999C8EA42685F4D500418C31 /* MediaContent.swift */; };
 		999C8EA726860C7000418C31 /* MusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 999C8EA626860C7000418C31 /* MusicViewController.swift */; };
 		999C8EA9268867AF00418C31 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 999C8EA8268867AF00418C31 /* MainTabBarController.swift */; };
+		999C8EAB26887CEE00418C31 /* PodcastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 999C8EAA26887CEE00418C31 /* PodcastViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		999C8EA42685F4D500418C31 /* MediaContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaContent.swift; sourceTree = "<group>"; };
 		999C8EA626860C7000418C31 /* MusicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicViewController.swift; sourceTree = "<group>"; };
 		999C8EA8268867AF00418C31 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		999C8EAA26887CEE00418C31 /* PodcastViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,17 +68,50 @@
 			children = (
 				999C8E8E2685F07000418C31 /* AppDelegate.swift */,
 				999C8E902685F07000418C31 /* SceneDelegate.swift */,
-				999C8EA8268867AF00418C31 /* MainTabBarController.swift */,
-				999C8E922685F07000418C31 /* MovieViewController.swift */,
-				999C8EA626860C7000418C31 /* MusicViewController.swift */,
-				999C8EA22685F4AE00418C31 /* NetworkService.swift */,
-				999C8EA42685F4D500418C31 /* MediaContent.swift */,
-				999C8E942685F07000418C31 /* Main.storyboard */,
+				999C8EAF26887FC000418C31 /* Storyboards */,
+				999C8EAE26887FAB00418C31 /* Model */,
+				999C8EAC26887F5D00418C31 /* ViewControllers */,
+				999C8EAD26887F9700418C31 /* Network */,
 				999C8E972685F07200418C31 /* Assets.xcassets */,
-				999C8E992685F07200418C31 /* LaunchScreen.storyboard */,
 				999C8E9C2685F07200418C31 /* Info.plist */,
 			);
 			path = iTunesAPIChecker;
+			sourceTree = "<group>";
+		};
+		999C8EAC26887F5D00418C31 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				999C8EA8268867AF00418C31 /* MainTabBarController.swift */,
+				999C8E922685F07000418C31 /* MovieViewController.swift */,
+				999C8EA626860C7000418C31 /* MusicViewController.swift */,
+				999C8EAA26887CEE00418C31 /* PodcastViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		999C8EAD26887F9700418C31 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				999C8EA22685F4AE00418C31 /* NetworkService.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		999C8EAE26887FAB00418C31 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				999C8EA42685F4D500418C31 /* MediaContent.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		999C8EAF26887FC000418C31 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				999C8E942685F07000418C31 /* Main.storyboard */,
+				999C8E992685F07200418C31 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,6 +187,7 @@
 				999C8EA726860C7000418C31 /* MusicViewController.swift in Sources */,
 				999C8EA52685F4D500418C31 /* MediaContent.swift in Sources */,
 				999C8E932685F07000418C31 /* MovieViewController.swift in Sources */,
+				999C8EAB26887CEE00418C31 /* PodcastViewController.swift in Sources */,
 				999C8EA9268867AF00418C31 /* MainTabBarController.swift in Sources */,
 				999C8E8F2685F07000418C31 /* AppDelegate.swift in Sources */,
 				999C8EA32685F4AE00418C31 /* NetworkService.swift in Sources */,
