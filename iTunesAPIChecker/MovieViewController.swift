@@ -10,11 +10,11 @@ import UIKit
 class MovieViewController: UITableViewController {
     let networkService = NetworkService()
     var media: ItunesAnswer? = nil
+    var urlString: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let urlString = "https://itunes.apple.com/search?term=Animation+Kids&limit=10"
         networkService.request(urlString: urlString) { [weak self] (result)  in
             switch result {
             
@@ -40,7 +40,6 @@ class MovieViewController: UITableViewController {
         content.text = media?.results[indexPath.row].trackName
         content.secondaryText = media?.results[indexPath.row].shortDescription
         
-    
         guard let urlString = self.media?.results[indexPath.row].artworkUrl100 else { return cell }
         guard let url = URL(string: urlString) else { return cell }
         guard let imageData = try? Data(contentsOf: url) else { return cell }

@@ -65,12 +65,13 @@
             </objects>
             <point key="canvasLocation" x="965" y="473"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Main Tab Bar Controller-->
         <scene sceneID="Ohy-eb-cqE">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="JOZ-uB-MDd" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="JOZ-uB-MDd" customClass="MainTabBarController" customModule="iTunesAPIChecker" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="vJi-f6-Y9B">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
